@@ -45,7 +45,7 @@ if [ $ret -ne 0 ]; then
     exit $ret
 fi
 
-count=$(ls tract/*.tck | wc -l)
+count=$(ls tract1/*.tck | wc -l)
 if [ $count -eq 4 ];
 then 
 	echo 0 > finished
