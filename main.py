@@ -8,8 +8,6 @@ profiles for FA (calculated with DTI).
 
 """
 import os.path as op
-import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
 import nibabel as nib
 import dipy.data as dpd
@@ -25,7 +23,6 @@ import AFQ.registration as reg
 import AFQ.dti as dti
 import AFQ.segmentation as seg
 import os
-plt.switch_backend('agg')
 
 def main():
         with open('config.json') as config_json:
