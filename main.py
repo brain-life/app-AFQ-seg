@@ -40,8 +40,8 @@ def main():
 			  'params': './dti_params.nii.gz'}
 
 	#tg = nib.streamlines.load('track.trk').tractogram
-	tg = nib.streamlines.load(config['tck_data']).tractogram
-	streamlines = tg.apply_affine(np.linalg.inv(img.affine)).streamlines
+	tg = nib.streamlines.load(config['tck_data'])
+	streamlines = tg.tractogram.apply_affine(np.linalg.inv(img.affine)).streamlines
 
 	# Use only a small portion of the streamlines, for expedience:
 	streamlines = streamlines[::100]
