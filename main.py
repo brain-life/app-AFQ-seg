@@ -55,8 +55,8 @@ def main():
 
 	print("Registering to template...")
 	if not op.exists('mapping.nii.gz'):
-        	gtab = gradient_table(hardi_fbval, hardi_fbvec)
-    	    	mapping = reg.syn_register_dwi(hardi_fdata, gtab)
+        	gtab = gradient_table(data_bval, data_bvec)
+    	    	mapping = reg.syn_register_dwi(data_file, gtab)
             	reg.write_mapping(mapping, './mapping.nii.gz')
 	else:
     	    	mapping = reg.read_mapping('./mapping.nii.gz', img, MNI_T2_img)
